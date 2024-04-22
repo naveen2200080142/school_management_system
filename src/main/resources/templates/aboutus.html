@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LazyCoder || sumit</title>
+    <style media="screen">
+        .jumbotron {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        .jumbotron h1 {
+            text-align: center;
+        }
+
+        .alert {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div th:include="navbar.html"></div>
+    <br><br>
+    <center>
+        <h3 class="alert alert-success" style="margin-bottom:0px;">About Us !</h3>
+    </center>
+    <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+        <h1 class="display-4">Hello</h1>
+        <p class="lead">A service dedicated to Admin, Student and Teacher. We provide online resources, professional support and guidance to all our students, teachers whenever, and from wherever they have chosen to study.</p>
+        <hr class="my-4">
+        <p>Explore our Website.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/" role="button">HOME</a>
+        </p>
+    </div>
+    <div th:include="footer.html"></div>
+</body>
+</html>
