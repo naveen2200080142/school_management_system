@@ -6,6 +6,6 @@ public class HomeController {
     @GetMapping("/")
     public String home() {
         System.err.println("Home Controller");
-        return "index"; // Assuming your HTML file is named home1.html
+        return "admission.html"; // Assuming your HTML file is named home1.html
     }  
 }
