@@ -1,9 +1,7 @@
-package com.sms.demo.Repository;
-
-
+package com.sms.demo;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.sms.demo.Model.Admission;
-
+import org.springframework.stereotype.Repository;
+@Repository
 public interface AdmissionRepository extends JpaRepository<Admission, Long> {
+    
 }
