@@ -12,10 +12,10 @@ public class Admission {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String first_name;
-    private String lastName;
+    private String last_name;
     private String username;
     private String password;
-    private String cl;
+    private String clas;
     private String roll;
     private String mobile;
     private double fee;
