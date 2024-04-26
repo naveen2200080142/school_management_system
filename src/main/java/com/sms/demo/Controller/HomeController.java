@@ -36,11 +36,23 @@ public class HomeController {
     public String adminclick() {
         return "adminclick.html";
     }
+    @GetMapping("studentclick")
+    public String studentclick(){
+        return "studentclick.html";
+    }
+    @GetMapping("teacherclick")
+    public String teacherclick(){
+        return "teacherclick.html";
+    }
     @PostMapping("/submitAdminSignup")
     public String submitAdminsignup(@ModelAttribute Admin admin) {
         // Save admission details to the database
         adminRepository.save(admin);
         return "redirect:/"; // Redirect to the home page after submission
+    }
+    @PostMapping("admin_dashboard")
+    public String admin_dashboard() {
+        return "admin_dashboard.html";
     }
     @PostMapping("adminlogin")
     public String adminlogin(@ModelAttribute Admin admin) {
@@ -50,7 +62,7 @@ public class HomeController {
     if (existingAdmin != null && existingAdmin.getPassword().equals(admin.getPassword())) {
         // Admin login successful
         System.err.println("Admin login successful");
-        return "redirect:/"; // Redirect to the admin panel or any other page
+        return "admin_dashboard"; // Redirect to the admin panel or any other page
     } else {
         System.err.println("Admin login failed");
         // Admin login failed, handle accordingly (e.g., show error message)
