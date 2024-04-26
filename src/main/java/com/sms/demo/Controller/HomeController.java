@@ -1,6 +1,7 @@
 package com.sms.demo.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,8 +18,12 @@ import com.sms.demo.Service.TeacherRepository;
 
 
 
+
+
 @Controller
 public class HomeController {
+    @Autowired
+    private StudentRepository studentRepository;
     @Autowired
     private AdminRepository adminRepository;
     @Autowired
@@ -40,7 +45,7 @@ public class HomeController {
     @GetMapping("studentsignup")
     public String studentsignup() {
         System.err.println("studentsignup");
-        return "studentsignup.html"; // Return the name of your admission.html file
+        return "admin_add_student.html"; // Return the name of your admission.html file
     }
     @GetMapping("studentlogin")
     public String studentlogin() {
@@ -57,7 +62,8 @@ public class HomeController {
     }
     @GetMapping("/adminlogin")
     public String adminlogin() {
-        return "adminlogin.html";}
+        return "adminlogin.html";
+    }
     @GetMapping("adminclick")
     public String adminclick() {
         return "adminclick.html";
@@ -79,6 +85,19 @@ public class HomeController {
         System.err.println("aboutus");
         return "aboutus.html";
     }
+    @GetMapping("adminstudent")
+    public String adminsudent(@ModelAttribute Admin admin, Model model){
+        Admin existingAdmin = adminRepository.findByUsername(admin.getUsername());
+        model.addAttribute("user",existingAdmin);
+        return "admin_student.html";
+    }
+    @GetMapping("adminteacher")
+    public String adminteacher(@ModelAttribute Admin admin, Model model) {
+        Admin existingAdmin = adminRepository.findByUsername(admin.getUsername());
+        model.addAttribute("user",existingAdmin);
+        return "admin_teacher.html";
+    }
+    
     @GetMapping("student_dashboard")
     public String student_dashboard(){
         return "student_dashboard.html";
@@ -119,13 +138,14 @@ public class HomeController {
    
     
     @PostMapping("adminlogin")
-    public String adminlogin(@ModelAttribute Admin admin) {
+    public String adminlogin(@ModelAttribute Admin admin, Model model) {
         Admin existingAdmin = adminRepository.findByUsername(admin.getUsername());
     
     // Check if the admin record exists and if the password matches
     if (existingAdmin != null && existingAdmin.getPassword().equals(admin.getPassword())) {
         // Admin login successful
         System.err.println("Admin login successful");
+        model.addAttribute("user",existingAdmin);
         return "admin_dashboard"; // Redirect to the admin panel or any other page
     } else {
         System.err.println("Admin login failed");
@@ -143,6 +163,11 @@ public class HomeController {
     @PostMapping("addteacher")
     public String addteacher(@ModelAttribute Teacher teacher){
         teacherRepository.save(teacher);
+        return "redirect:/";
+    }
+    @PostMapping("addstudent")
+    public String addstudent(@ModelAttribute Student student){
+        studentRepository.save(student);
         return "redirect:/";
     }
    @GetMapping("teacherlogin")

@@ -12,8 +12,7 @@
     }
     .sidebar {
   background: #2f323a;
-  margin-top: 0; /* Remove this line */
-  padding-top: 30px;
+
   position: fixed;
   left: 0;
   width: 250px;
@@ -29,7 +28,7 @@
     }
 
     header {
-      position: fixed;
+
       background: #22242A;
       padding: 20px;
       width: 100%;
@@ -70,8 +69,7 @@
 
     .sidebar {
       background: #2f323a;
-      margin-top: 70px;
-      padding-top: 30px;
+
       position: fixed;
       left: 0;
       width: 250px;
@@ -148,7 +146,7 @@
       background: url(background.png) no-repeat;
       background-position: center;
       background-size: cover;
-      height: 100vh;
+      height: 40vh;
       transition: 0.5s;
     }
 
@@ -188,13 +186,13 @@
     <center>
 
       <img src="admin.png" class="profile_image" alt="">
-      <h4>{{request.user.first_name}}</h4>
+      <h4 th:text="${admin.username}"></h4>
 
     </center>
 
-    <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-    <a href="#"><i class="fas fa-chalkboard-teacher"></i><span>Teacher</span></a>
-    <a href="#"><i class="fas fa-user-graduate"></i><span>Student</span></a>
+    <a href="admin_dashboard"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
+    <a href="adminteacher"><i class="fas fa-chalkboard-teacher"></i><span>Teacher</span></a>
+    <a href="adminstudent"><i class="fas fa-user-graduate"></i><span>Student</span></a>
     <a href="#"><i class="fas fa-address-card"></i><span>Attendance</span></a>
     <a href="#"><i class="fas fa-search-dollar"></i><span>Fee</span></a>
     <a href="#"><i class="fas fa-bullhorn"></i><span>Notice</span></a>
@@ -205,14 +203,7 @@
 
 
   <!--content start-->
-  <div class="content">
-    <br><br><br><br><br>
-    
 
-
-    <br><br><br>
-
-  </div>
   <!--content end-->
   <!--
       written By : sumit kumar
