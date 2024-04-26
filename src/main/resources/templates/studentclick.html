@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en" dir="ltr">
 
 <head>
@@ -115,23 +114,22 @@ facebook : fb.com/sumit.luv
 -->
 
 
-{% block content %}
+
 
 <br>
 <br>
 
 <div class="jumbotron" style="margin-bottom:0px;">
-  <h1 class="display-4">Hello, Admin</h1>
+  <h1 class="display-4">Hello, Student</h1>
   <p class="lead">Welcome to Online School Management System.</p>
   <hr class="my-4">
   <p>You can access various features after Login/SignUp.</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="adminsignup" role="button">SignUp</a>
-    <a class="btn btn-primary btn-lg" href="adminlogin" role="button">Login</a>
+    <a class="btn btn-primary btn-lg" href="studentlogin" role="button">Login</a>
   </p>
 </div>
 
-{% endblock content %}
+
 
 
 
@@ -193,9 +191,9 @@ facebook : fb.com/sumit.luv
     <div class="grid-container">
       <div class="grid-item">
         <div class="card">
-          <img src="{% static "images/admin.png" %}" alt="John" style="width:100%">
+          <img src="admin.png" alt="John" style="width:100%">
           <p class="title">ADMIN</p>
-          <p><button><a href="/adminclick">View</a></button></p>
+          <p><button><a href="adminclick">View</a></button></p>
         </div>
   
       </div>
@@ -204,15 +202,15 @@ facebook : fb.com/sumit.luv
         <div class="card">
           <img src="teacher.png" alt="John" style="width:100%">
           <p class="title">TEACHER</p>
-          <p><button><a href="/teacherclick">View</a></button></p>
+          <p><button><a href="teacherclick">View</a></button></p>
         </div>
       </div>
   
       <div class="grid-item">
         <div class="card">
-          <img src="{% static "images/student1.png" %}" alt="John" style="width:100%">
+          <img src="student1.png" alt="John" style="width:100%">
           <p class="title">STUDENT</p>
-          <p><button><a href="/studentclick">View</a></button></p>
+          <p><button><a href="studentclick">View</a></button></p>
         </div>
       </div>
   

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% load static %}
 <html lang="en" dir="ltr">
 
 <head>
@@ -10,7 +9,7 @@
         .jumbotron {
             margin-top: 0px;
             margin-bottom: 0px;
-            background-image: url('{% static "images/bg2.jpg" %}');
+            background-image: url('bg2.jpg');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -80,12 +79,12 @@
                 <div class="navbar-nav">
                     <a href="/" class="nav-item nav-link active">Home</a>
                     <a href="adminclick" class="nav-item nav-link">Admin</a>
-                    <a href="/teacherclick" class="nav-item nav-link">Teacher</a>
-                    <a href="/studentclick" class="nav-item nav-link">Student</a>
+                    <a href="teacherclick" class="nav-item nav-link">Teacher</a>
+                    <a href="studentclick" class="nav-item nav-link">Student</a>
                 </div>
 
                 <div class="navbar-nav">
-                    <a href="/aboutus" class="nav-item nav-link">About Us</a>
+                    <a href="aboutus" class="nav-item nav-link">About Us</a>
                     <a href="contactus" class="nav-item nav-link">Contact Us</a>
                 </div>
             </div>
@@ -98,7 +97,7 @@
     <br>
     <center> 
         <h3 class='alert alert-success'>Send Us Your Valuable Feedback !</h3>
-        <form method="POST" th:action="@{/submitForm}">
+        <form method="POST" th:action="#">
             <!-- Very Important csrf Token -->
             <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
             <div class="form-group">
@@ -167,85 +166,5 @@
     </body>
     <br</div>><br>
     <br>
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            /*---------------------------------------
-     Social section
------------------------------------------*/
-            footer {
-                padding: 0px 0px 0px 0px;
-                background-color: black;
-                margin: 0px;
-            }
-
-            .fa {
-                padding: 20px;
-                font-size: 23px;
-                width: 60px;
-                text-align: center;
-                text-decoration: none;
-                margin: 5px 2px;
-                border-radius: 50%;
-            }
-
-            .fa:hover {
-                opacity: 0.5;
-                text-decoration: none;
-            }
-
-            .fa-facebook {
-                background: #3B5998;
-                color: white;
-                margin-top: 30px;
-            }
-
-            .fa-whatsapp {
-                background: #25d366;
-                color: white;
-            }
-
-            .fa-twitter {
-                background: #55ACEE;
-                color: white;
-            }
-
-            .fa-instagram {
-                background: #125688;
-                color: white;
-            }
-
-            p {
-                text-align: center;
-            }
-        </style>
-    </head>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <footer>
-        <p>
-            <a href="https://facebook.com/sumit.luv/" class="fa fa-facebook"></a>
-            <a href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
-            <a href="https://instagram.com/sumit.luv" class="fa fa-instagram"></a>
-            <a href="https://twitter.com/sumitkumar1503" class="fa fa-twitter"></a>
-        </p>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
-                        <p>Made in India <br>
-                            Copyright &copy; NaveenArts</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-
+    
 </html>
