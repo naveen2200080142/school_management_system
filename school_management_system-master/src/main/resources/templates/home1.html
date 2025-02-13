@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url( "bg2.jpg" );
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+
+
+
+    .glow {
+      font-size: 70px;
+      color: #ffffff;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #9554b3, 0 0 60px #9554b3, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+    .bs-example {
+      margin: 0px;
+
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-family: sans-serif;
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+      <a href="/" class="navbar-brand">School Management</a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a href="/" class="nav-item nav-link active">Home</a>
+          <a href="adminclick" class="nav-item nav-link">Admin</a>
+          <a href="teacherclick" class="nav-item nav-link">Teacher</a>
+          <a href="studentclick" class="nav-item nav-link">Student</a>
+
+
+        </div>
+
+        <div class="navbar-nav">
+          <a href="aboutus" class="nav-item nav-link">About Us</a>
+          <a href="contactus" class="nav-item nav-link">Contact Us</a>
+        </div>
+
+
+
+
+      </div>
+    </nav>
+  </div>
+
+
+</body>
+
+
+
+  <br>
+  <br>
+  <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+    <br>
+    <h1 class="display-4 glow">Welcome</h1>
+
+    <br><br>
+    <p>Knowledge is key to success.</p>
+    <br><br><br><br><br>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="admission" role="button">Take Admission</a>
+    </p>
+    <br><br>
+  </div>
+
+  <br>
+  <br>
+  <br><br>
+
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+      }
+  
+      .title {
+        color: grey;
+        font-size: 18px;
+      }
+  
+      button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+  
+      button:hover,
+      a:hover {
+        opacity: 0.7;
+      }
+  
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+      }
+  
+      a:link {
+        text-decoration: none;
+      }
+  
+      a {
+        color: white;
+      }
+    </style>
+  </head>
+  
+  <body>
+  
+  
+  
+    <div class="grid-container">
+      <div class="grid-item">
+        <div class="card">
+          <img src="admin.png" alt="John" style="width:100%">
+          <p class="title">ADMIN</p>
+          <p><button><a href="/adminclick">View</a></button></p>
+        </div>
+  
+      </div>
+  
+      <div class="grid-item">
+        <div class="card">
+          <img src="teacher.png" alt="John" style="width:100%">
+          <p class="title">TEACHER</p>
+          <p><button><a href="/teacherclick">View</a></button></p>
+        </div>
+      </div>
+  
+      <div class="grid-item">
+        <div class="card">
+          <img src="student1.png" alt="John" style="width:100%">
+          <p class="title">STUDENT</p>
+          <p><button><a href="/studentclick">View</a></button></p>
+        </div>
+      </div>
+  
+    </div>
+  
+  
+    <!--
+  written By : sumit kumar
+  facebook : fb.com/sumit.luv
+  -->
+  
+  
+  </body>
+  <br><br>
+  <br>
+  <br>
+  <br>
+  <br>
+ <head>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <style>
+    /*---------------------------------------
+   Social section
+-----------------------------------------*/
+    footer {
+      padding: 0px 0px 0px 0px;
+      background-color: black;
+      margin: 0px;
+    }
+
+    .fa {
+      padding: 20px;
+      font-size: 23px;
+      width: 60px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+    }
+
+    .fa:hover {
+      opacity: 0.5;
+      text-decoration: none;
+    }
+
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+      margin-top: 30px;
+    }
+
+    .fa-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+
+    p {
+      text-align: center;
+
+    }
+  </style>
+</head>
+
+<footer>
+
+  <p>
+    <a href="https://facebook.com/sumit.luv/" class="fa fa-facebook"></a>
+    <a href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
+    <a href="https://instagram.com/sumit.luv" class="fa fa-instagram"></a>
+    <a href="https://twitter.com/sumitkumar1503" class="fa fa-twitter"></a>
+  </p>
+
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+          <p>Made in India <br>
+            Copyright &copy; NaveenArts</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>
